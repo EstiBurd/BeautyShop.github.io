@@ -1,0 +1,227 @@
+* {
+    font-family: GveretLevinAlefAlefAlef-Regular;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    width: 10%;
+    height: 10vh;
+}
+
+a:hover {
+    color: rgb(172, 172, 172);
+    font-size: 26px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    flex-direction: row;
+}
+
+.logo {
+    position: fixed;
+    float: left;
+    margin: 0 10px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.418);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;
+    ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+a:hover {
+    color: rgb(172, 172, 172);
+    font-size: 26px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.footer {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.i {
+    width: 40px;
+    height: 40px;
+}
+
+.footer>div {
+    flex: 1;
+}
+
+@media (min-width:1000px) {
+    .text {
+        grid-area: t;
+    }
+    .video {
+        grid-area: video;
+    }
+    .footer {
+        grid-area: footer;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .container {
+        display: grid;
+        grid-template-areas: 'header header header header header header' 'video video video  . t t' 'footer footer footer footer footer footer';
+        grid-gap: 10px;
+        padding: 0px;
+        margin-top: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    .video {
+        max-width: 100%;
+        height: auto;
+    }
+    main {
+        display: flex;
+        padding: 20px;
+    }
+    .container>div {
+        padding: 20px 0;
+    }
+    p {
+        text-align: right;
+        font-size: 24px;
+    }
+    .header {
+        grid-area: header;
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+@media (max-width:1000px) {
+    .logo {
+        display: none;
+        position: fixed;
+        top: 0;
+        margin-top: 15px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    nav.black ul {
+        background: #000;
+    }
+    .showing {
+        max-height: 34em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .text {
+        display: flex;
+        justify-content: right;
+        text-align: right;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .video {
+        align-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+    video.video {
+        width: 100%;
+    }
+    .footer p {
+        text-align: right;
+    }
+    .header {
+        margin: auto;
+        /* justify-content: center;
+        text-align: center; */
+    }
+    .container {
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 94%;
+        margin: 4em auto;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+        flex-direction: row;
+    }
+    /* h1 {
+        text-align: center;
+    } */
+}
